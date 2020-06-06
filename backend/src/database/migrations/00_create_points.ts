@@ -10,6 +10,7 @@ export async function up(knex: Knex) {
     table.decimal('latitude').notNullable();
     table.decimal('longitude').notNullable();
     table.string('city').notNullable();
+    table.string('district').notNullable();
   });
 }
 

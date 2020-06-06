@@ -44,6 +44,7 @@ class PointsController {
       longitude,
       items,
       city,
+      district
     } = req.body;
   
     const trx = await knex.transaction();
@@ -56,6 +57,7 @@ class PointsController {
       latitude,
       longitude,
       city,
+      district,
     };
 
     const insertIds = await trx('points').insert(point);

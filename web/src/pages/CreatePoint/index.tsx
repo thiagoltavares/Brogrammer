@@ -162,7 +162,7 @@ const CreatePoint: React.FC = () => {
     const { email, name, whatsapp } = formData;
     const district = selectedDistrict;
     const city = selectedCity;
-    const [longitude, latitude] = selectedPosition;
+    const [latitude, longitude] = selectedPosition;
     const itemsSelected = selectedItems;
 
     const data = {
@@ -177,8 +177,10 @@ const CreatePoint: React.FC = () => {
     };
 
     const response = await api.post('points', data);
+
     console.log(response);
-    console.log(data);
+
+    alert('Ponto cadastrado com sucesso.');
 
     history.push('/');
   }
