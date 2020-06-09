@@ -184,18 +184,6 @@ const CreatePoint: React.FC = () => {
       data.append('image', selectedFile);
     }
 
-    // const data = {
-    //   name,
-    //   email,
-    //   whatsapp,
-    //   district,
-    //   city,
-    //   longitude,
-    //   latitude,
-    //   items: itemsSelected,
-    //   image: selectedFile,
-    // };
-
     await api.post('points', data);
 
     alert('Ponto cadastrado com sucesso.');

@@ -34,6 +34,7 @@ interface Point {
 interface Params {
   district: string;
   city: string;
+  coord: [number, number];
 }
 
 const Points: React.FC = () => {
@@ -44,6 +45,8 @@ const Points: React.FC = () => {
     0,
     0,
   ]);
+
+  const [cityPosition, setCityPosition] = useState<[number, number]>([0, 0]);
 
   const navigation = useNavigation();
   const route = useRoute();
@@ -79,9 +82,14 @@ const Points: React.FC = () => {
 
       const location = await Location.getCurrentPositionAsync();
 
+      // Location by mobile location
       const { latitude, longitude } = location.coords;
 
-      setInitialPosition([latitude, longitude]);
+      // Location by city from route;
+      const { coord } = routeParams;
+
+      // setInitialPosition(coord);
+      setInitialPosition(coord);
     }
 
     loadPosition();
