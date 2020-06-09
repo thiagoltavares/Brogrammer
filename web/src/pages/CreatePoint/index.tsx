@@ -1,4 +1,6 @@
-/* eslint-disable camelcase */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
@@ -8,6 +10,7 @@ import axios from 'axios';
 import api from '../../services/api';
 
 import logo from '../../assets/logo.svg';
+import DropZone from '../../components/Dropzone';
 
 import './styles.css';
 
@@ -47,6 +50,7 @@ const CreatePoint: React.FC = () => {
   const [selectedDistrict, setSelectedDistrict] = useState('0');
   const [selectedCity, setSelectedCity] = useState('0');
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
+  const [selectedFile, setSelectedFile] = useState<File>();
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -159,26 +163,40 @@ const CreatePoint: React.FC = () => {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+
     const { email, name, whatsapp } = formData;
     const district = selectedDistrict;
     const city = selectedCity;
     const [latitude, longitude] = selectedPosition;
     const itemsSelected = selectedItems;
 
-    const data = {
-      name,
-      email,
-      whatsapp,
-      district,
-      city,
-      longitude,
-      latitude,
-      items: itemsSelected,
-    };
+    const data = new FormData();
 
-    const response = await api.post('points', data);
+    data.append('name', name);
+    data.append('email', email);
+    data.append('whatsapp', whatsapp);
+    data.append('district', district);
+    data.append('city', city);
+    data.append('longitude', String(longitude));
+    data.append('latitude', String(latitude));
+    data.append('items', itemsSelected.join(','));
+    if (selectedFile) {
+      data.append('image', selectedFile);
+    }
 
-    console.log(response);
+    // const data = {
+    //   name,
+    //   email,
+    //   whatsapp,
+    //   district,
+    //   city,
+    //   longitude,
+    //   latitude,
+    //   items: itemsSelected,
+    //   image: selectedFile,
+    // };
+
+    await api.post('points', data);
 
     alert('Ponto cadastrado com sucesso.');
 
@@ -199,6 +217,8 @@ const CreatePoint: React.FC = () => {
       </header>
       <form onSubmit={handleSubmit}>
         <h1>Cadastro do ponto de coleta</h1>
+
+        <DropZone onFileUploaded={setSelectedFile} />
 
         <fieldset>
           <legend>
