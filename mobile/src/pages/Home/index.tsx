@@ -152,10 +152,11 @@ const Home: React.FC = () => {
           <Image source={logo} />
           <View>
             <Text style={styles.title}>
-              Seu Marketplace de coleta de resíduos
+              Local de estudos para programadores
             </Text>
             <Text style={styles.description}>
-              Ajudamos pessoas a encontrar postos de coleta de forma eficiente
+              Ajudamos programadores a encontrar parceiros de estudos em várias
+              stacks...
             </Text>
           </View>
         </View>
@@ -207,7 +208,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: '#322153',
+    color: '#145DDB',
     fontSize: 32,
     fontFamily: 'Ubuntu_700Bold',
     maxWidth: 260,
@@ -237,7 +238,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: '#34CB79',
+    backgroundColor: '#00B0FF',
     height: 60,
     flexDirection: 'row',
     borderRadius: 10,

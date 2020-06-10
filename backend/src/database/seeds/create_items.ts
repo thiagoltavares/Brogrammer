@@ -2,11 +2,11 @@ import Knex from 'knex';
 
 export async function seed(knex: Knex) {
   await knex('items').insert([
-    { title: 'Lâmpadas', image: 'lampadas.svg' },
-    { title: 'Pilhas e Baterias', image: 'baterias.svg' },
-    { title: 'Papéis e Papelão', image: 'papeis-papelao.svg' },
-    { title: 'Residuos Eletrônicos', image: 'eletronicos.svg' },
-    { title: 'Residuos Orgânicos', image: 'organicos.svg' },
-    { title: 'Óleo de cozinha', image: 'oleo.svg' },
+    { title: 'Javascript', image: 'javascript.svg' },
+    { title: 'Java', image: 'java.svg' },
+    { title: 'Php', image: 'php.svg' },
+    { title: 'Python', image: 'python.svg' },
+    { title: 'Ruby', image: 'ruby.svg' },
+    { title: 'Swift', image: 'swift.svg' },
   ]);
 }

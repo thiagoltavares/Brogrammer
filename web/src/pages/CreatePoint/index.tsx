@@ -204,7 +204,7 @@ const CreatePoint: React.FC = () => {
         </Link>
       </header>
       <form onSubmit={handleSubmit}>
-        <h1>Cadastro do ponto de coleta</h1>
+        <h1>Cadastro do Brogramador</h1>
 
         <DropZone onFileUploaded={setSelectedFile} />
 
@@ -214,7 +214,7 @@ const CreatePoint: React.FC = () => {
             <span>Insira seus dados</span>
           </legend>
           <div className="field">
-            <label htmlFor="name">Nome da entidade</label>
+            <label htmlFor="name">Nome da Brogrammer</label>
             <input
               type="text"
               name="name"
@@ -246,8 +246,8 @@ const CreatePoint: React.FC = () => {
 
         <fieldset>
           <legend>
-            <h2>Endereço</h2>
-            <span>Selecione o endereço clicando no mapa</span>
+            <h2>Morada</h2>
+            <span>Selecione a morada clicando no mapa</span>
           </legend>
 
           <div className="field-group">
@@ -297,7 +297,7 @@ const CreatePoint: React.FC = () => {
 
         <fieldset>
           <legend>
-            <h2>Items de coleta</h2>
+            <h2>Linguagens de programação</h2>
             <span>Selecione um ou mais itens abaixo</span>
           </legend>
           <ul className="items-grid">

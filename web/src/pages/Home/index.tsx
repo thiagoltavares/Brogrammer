@@ -10,20 +10,21 @@ const Home: React.FC = () => {
     <div id="page-home">
       <div className="content">
         <header>
-          <img src={logo} alt="ecoleta" />
+          <img src={logo} alt="brogrammer" />
         </header>
 
         <main>
-          <h1>Seu marketplace de coleta de resíduos</h1>
+          <h1>Local de estudos para programadores</h1>
           <p>
-            Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente
+            Ajudamos programadores a encontrar parceiros de estudos em várias
+            stacks..
           </p>
 
           <Link to="/create-point">
             <span>
               <FiLogIn />
             </span>
-            <strong>Cadastre um ponto de coleta</strong>
+            <strong>Cadastre um Brogramador</strong>
           </Link>
         </main>
       </div>

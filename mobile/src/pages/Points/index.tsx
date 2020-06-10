@@ -129,13 +129,11 @@ const Points: React.FC = () => {
     <>
       <View style={styles.container}>
         <TouchableOpacity onPress={handleNavigateBack}>
-          <Icon name="arrow-left" size={20} color="#34cd79" />
+          <Icon name="arrow-left" size={20} color="#00B0FF" />
         </TouchableOpacity>
 
         <Text style={styles.title}>Bem Vindo</Text>
-        <Text style={styles.description}>
-          Encontre no mapa um ponto de coleta
-        </Text>
+        <Text style={styles.description}>Encontre no mapa um Brogramador</Text>
         <View style={styles.mapContainer}>
           {initialPosition[0] !== 0 && (
             <MapView
@@ -240,7 +238,7 @@ const styles = StyleSheet.create({
   mapMarkerContainer: {
     width: 90,
     height: 70,
-    backgroundColor: '#34CB79',
+    backgroundColor: '#00B0FF',
     flexDirection: 'column',
     borderRadius: 8,
     overflow: 'hidden',
@@ -285,7 +283,7 @@ const styles = StyleSheet.create({
   },
 
   selectedItem: {
-    borderColor: '#34CB79',
+    borderColor: '#00B0FF',
     borderWidth: 2,
   },
 
