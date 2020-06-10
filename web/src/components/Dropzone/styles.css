@@ -2,7 +2,6 @@
   height: 300px;
   background: var(--selected-color);
   border-radius: 10px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +21,6 @@
   height: calc(100% - 60px);
   border-radius: 10px;
   border: 1px dashed var(--primary-color);
-
   display: flex;
   flex-direction: column;
   justify-content: center;

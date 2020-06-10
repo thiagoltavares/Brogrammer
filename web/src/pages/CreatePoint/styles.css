@@ -1,13 +1,11 @@
 #page-create-point {
   width: 100%;
   max-width: 1100px;
-
   margin: 0 auto;
 }
 
 #page-create-point header {
   margin-top: 48px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +15,6 @@
   color: var(--title-color);
   font-weight: bold;
   text-decoration: none;
-
   display: flex;
   align-items: center;
 }
@@ -31,9 +28,8 @@
   margin: 80px auto;
   padding: 64px;
   max-width: 730px;
-  background: #FFF;
+  background: #fff;
   border-radius: 8px;
-
   display: flex;
   flex-direction: column;
 }
@@ -84,12 +80,12 @@
 #page-create-point form .field input[type=email],
 #page-create-point form .field input[type=number] {
   flex: 1;
-  background: #F0F0F5;
+  background: #f0f0f5;
   border-radius: 8px;
   border: 0;
   padding: 16px 24px;
   font-size: 16px;
-  color: #6C6C80;
+  color: #6c6c80;
 }
 
 #page-create-point form .field select {
@@ -97,16 +93,16 @@
   -moz-appearance: none;
   appearance: none;
   flex: 1;
-  background: #F0F0F5;
+  background: #f0f0f5;
   border-radius: 8px;
   border: 0;
   padding: 16px 24px;
   font-size: 16px;
-  color: #6C6C80;
+  color: #6c6c80;
 }
 
 #page-create-point form .field input::placeholder {
-  color: #A0A0B2;
+  color: #a0a0b2;
 }
 
 #page-create-point form .field label {
@@ -132,7 +128,7 @@
 }
 
 #page-create-point form .field-check input[type=checkbox] {
-  background: #F0F0F5;
+  background: #f0f0f5;
 }
 
 #page-create-point form .field-check label {
@@ -151,7 +147,7 @@
   height: 56px;
   background: var(--primary-color);
   border-radius: 8px;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   font-size: 16px;
   border: 0;
@@ -178,21 +174,17 @@
   height: 180px;
   border-radius: 8px;
   padding: 32px 24px 16px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   text-align: center;
-
   cursor: pointer;
 }
 
 .items-grid li span {
   flex: 1;
   margin-top: 12px;
-
   display: flex;
   align-items: center;
   color: var(--title-color)

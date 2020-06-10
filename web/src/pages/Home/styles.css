@@ -1,6 +1,5 @@
 #page-home {
   height: 100vh;
-
   background: url('../../assets/home-background.svg') no-repeat 700px bottom;
 }
 
@@ -10,7 +9,6 @@
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 30px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -23,7 +21,6 @@
 #page-home .content main {
   flex: 1;
   max-width: 560px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,11 +44,9 @@
   background: var(--primary-color);
   border-radius: 8px;
   text-decoration: none;
-
   display: flex;
   align-items: center;
   overflow: hidden;
-
   margin-top: 40px;
 }
 
@@ -60,7 +55,6 @@
   background: rgba(0, 0, 0, 0.08);
   width: 72px;
   height: 72px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +62,7 @@
 }
 
 #page-home .content main a span svg {
-  color: #FFF;
+  color: #fff;
   width: 20px;
   height: 20px;
 }
@@ -76,14 +70,14 @@
 #page-home .content main a strong {
   flex: 1;
   text-align: center;
-  color: #FFF;
+  color: #fff;
 }
 
 #page-home .content main a:hover {
   background: var(--secondary-color);
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   #page-home .content {
     align-items: center;
     text-align: center;
