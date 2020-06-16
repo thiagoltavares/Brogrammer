@@ -32,6 +32,11 @@
   <a href="#memo-license">License</a>
 </p>
 
+![alt text](images//web1.png?raw=true)
+![alt text](images//web2.png?raw=true)
+![alt text](images//mob1.jpeg?raw=true)
+![alt text](images//mob2.jpeg?raw=true)
+![alt text](images//mob3.jpeg?raw=true)
 
 ## :rocket: Technologies
 
